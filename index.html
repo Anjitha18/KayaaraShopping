@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <div class="logo-text">Kayaara</div>
+  <div class="right-icons">
+    <span class="wishlist-icon" onclick="goWishlistPage()">❤️ <span id="count">0</span></span>
+    <span onclick="goContact()">📞</span>
+  </div>
+</header>
+
+<!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HOME / NEW ARRIVALS -->
+<section id="home">
+  <h2>New Arrivals</h2>
+  <div class="slider">
+    <div class="slides">
+      <img src="images/1000197514.png" alt="New Arrival 1">
+      <img src="images/1000197532.png" alt="New Arrival 2">
+      <img src="images/1000197536.png" alt="New Arrival 3">
+      <img src="images/1000197518.png" alt="New Arrival 4">
+      <img src="images/1000197542.png" alt="New Arrival 5">
+      <img src="images/1000197538.png" alt="New Arrival 6">
+      <img src="images/1000197526.png" alt="New Arrival 7">
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <h2>Products</h2>
+  <div class="product-container" id="productContainer"></div>
+
+  <!-- View More button -->
+  <div style="text-align:center; margin-top: 20px;">
+    <button id="viewMoreBtn">View More</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📞 Phone: +91 9080272108</p>
+  <p>📧 Email: your@email.com</p>
+  <p>📷 Instagram: <a href="https://www.instagram.com/bykayaara?igsh=MTY1dHM5Zmp1eGhsMA%3D%3D">View My Page</a></p>
+
+  <h3>Terms & Conditions</h3>
+  <p>All sales are final. No return policy.</p>
+</section>
+
+<!-- WISHLIST POPUP -->
+<div id="wishlistBox">
+  <h3>Your Wishlist</h3>
+  <ul id="wishlistItems"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

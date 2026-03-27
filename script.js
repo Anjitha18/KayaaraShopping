@@ -47,6 +47,14 @@ document.addEventListener("click", function (e) {
 // MENU
 function toggleMenu() {
   document.getElementById("sideMenu").classList.toggle("active");
+  document.querySelectorAll(".side-menu a").forEach(item => {
+  item.addEventListener("click", () => {
+    document.getElementById("sideMenu").classList.remove("active");
+  });
+});
+}
+function closeMenu() {
+  document.querySelector(".menu").classList.remove("active");
 }
 
 // CONTACT
@@ -260,4 +268,10 @@ window.addEventListener("load", function () {
 
   title.innerText = data.title;
   content.innerHTML = data.content;
+});
+
+document.querySelectorAll(".menu a").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelector(".menu").classList.remove("active");
+  });
 });

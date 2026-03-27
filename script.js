@@ -13,7 +13,7 @@ function addWishlist(name, price, image, btn) {
     wishlist.push(product);
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
     document.getElementById("count").innerText = wishlist.length;
-    alert(`${name} added to your wishlist ❤️`);
+    alert(`${name} added to your wishlist 🛒 `);
   } else {
     alert(`${name} is already in your wishlist`);
   }
@@ -56,7 +56,7 @@ function goContact() {
 
 // WHATSAPP ORDER
 function orderNow(product) {
-  const number = "919080272108";
+  const number = "918262997357";
   const message = `I want to order ${product}`;
   const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
@@ -87,36 +87,35 @@ window.addEventListener("pageshow", () => {
 
 // ================= PRODUCTS + VIEW MORE (3 per batch) =================
 const products = [
-  { name: "Product 1", price: 500, image: "images/1000197530.png" },
-  { name: "Product 2", price: 700, image: "images/1000197532.png" },
-  { name: "Product 3", price: 700, image: "images/1000197528.png" },
-  { name: "Product 4", price: 700, image: "images/1000197536.png" },
-  { name: "Product 5", price: 700, image: "images/1000197538.png" },
-  { name: "Product 6", price: 700, image: "images/1000197540.png" },
-  { name: "Product 7", price: 700, image: "images/1000197542.png" },
-  { name: "Product 8", price: 700, image: "images/1000197548.jpg" },
-  { name: "Product 9", price: 700, image: "images/1000197551.jpg" },
-  { name: "Product 10", price: 700, image: "images/1000197514.png" },
-  { name: "Product 11", price: 700, image: "images/1000197518.png" },
-  { name: "Product 12", price: 700, image: "images/1000197520.png" },
-  { name: "Product 13", price: 700, image: "images/1000197522.png" },
-  { name: "Product 14", price: 700, image: "images/1000197524.png" },
-  { name: "Product 15", price: 700, image: "images/1000197526.png" },
-  { name: "Product 16", price: 700, image: "images/1000197544.jpg" },
-  { name: "Product 17", price: 700, image: "images/1000197554.jpg" },
-  { name: "Product 19", price: 700, image: "images/1000197560.jpg" },
-  { name: "Product 20", price: 700, image: "images/1000197563.jpg" },
-  { name: "Product 21", price: 700, image: "images/1000197566.jpg" },
-  { name: "Product 22", price: 700, image: "images/1000197569.jpg" },
-  { name: "Product 23", price: 700, image:"images/1000197572.jpg" },
-  { name: "Product 24", price: 700, image: "images/1000197575.jpg" },
-  { name: "Product 25", price: 700, image: "images/1000197578.jpg" }
+  { name: "Jade Aura", price: 349, image: "images/1000197530.png" },
+  { name: "Royal Mayura", price: 450, image: "images/1000197532.png" },
+  { name: "Linear bloom", price: 260, image: "images/1000197528.png" },
+  { name: "Noor Chakra", price: 370, image: "images/1000197536.png" },
+  { name: "Royal Mayura", price: 450, image: "images/1000197538.png" },
+  { name: "Half moon drops", price: 299, image: "images/1000197540.png" },
+  { name: "Sitara glow", price: 550, image: "images/1000197542.png" },
+  { name: "Noor Chakra", price: 370, image: "images/1000197548.jpg" },
+  { name: "Half moon drops", price: 299, image: "images/1000197551.jpg" },
+  { name: "Ruby crescent Chandbali", price: 450, image: "images/1000197514.png" },
+  { name: "Regal loop charm", price: 340, image: "images/1000197518.png" },
+  { name: "Regal loop charm", price: 340, image: "images/1000197520.png" },
+  { name: "Noor Mandala drops", price: 450, image: "images/1000197522.png" },
+  { name: "Regal loop charm", price: 340, image: "images/1000197524.png" },
+  { name: "Devi crescent drops", price: 399, image: "images/1000197526.png" },
+  { name: "Petal Crescent", price: 354, image: "images/1000197554.jpg" },
+  { name: "Regal loop charm", price: 340, image: "images/1000197560.jpg" },
+  { name: "Aura petals", price: 295, image: "images/1000197563.jpg" },
+  { name: "Sitara glow", price: 550, image: "images/1000197566.jpg" },
+  { name: "Royal Mayura", price: 450, image: "images/1000197569.jpg" },
+  { name: "Jade Aura", price: 349, image:"images/1000197572.jpg" },
+  { name: "Royal Mayura", price: 450, image: "images/1000197575.jpg" },
+  { name: "Royal Mayura", price: 450, image: "images/1000197578.jpg" }
 ];
 
 const productContainer = document.getElementById("productContainer");
 const viewMoreBtn = document.getElementById("viewMoreBtn");
 
-let productsPerBatch = 3;
+let productsPerBatch = 4;
 let currentIndex = 0;
 
 function renderProductsBatch() {
@@ -124,13 +123,17 @@ function renderProductsBatch() {
   nextBatch.forEach(product => {
     const div = document.createElement("div");
     div.classList.add("product");
+   
     div.innerHTML = `
-      <img src="${product.image}" />
-      <h3>${product.name}</h3>
-      <p>₹${product.price}</p>
-      <button class="heart-btn" onclick="addWishlist('${product.name}', ${product.price}, '${product.image}', this)">❤️</button>
-      <button onclick="orderNow('${product.name}')">Order Now</button>
-    `;
+  <img src="${product.image}" />
+  <h3>${product.name}</h3>
+  <p>₹${product.price}</p>
+
+  <div class="product-actions">
+    <button class="heart-btn" onclick="addWishlist('${product.name}', ${product.price}, '${product.image}', this)">🛒</button>
+    <button onclick="orderNow('${product.name}')">Order Now</button>
+  </div>
+`;
     productContainer.appendChild(div);
   });
 
@@ -171,8 +174,90 @@ wishlist1.forEach(product => {
 
 // WhatsApp order
 function orderNow(product) {
-  let number = "919080272108";
+  let number = "918262997357";
   let message = `I want to order ${product}`;
   let url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 }
+// ================= POLICY NAVIGATION =================
+function openPage(type) {
+  window.location.href = "policy-detail.html?type=" + type;
+}
+
+// ================= POLICY CONTENT RENDER =================
+window.addEventListener("load", function () {
+
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get("type");
+
+  const title = document.getElementById("title");
+  const content = document.getElementById("content");
+
+  if (!type || !title || !content) return;
+
+  let data = {};
+
+  if (type === "shipping") {
+    data = {
+      title: "Shipping Policy",
+      content: `
+        <p>We offer secure and reliable shipping across India.</p>
+        <ul>
+          <li>Orders are processed within 3-7 business days.</li>
+          <li>Delivery timelines vary based on your location.</li>
+          <li>Tracking details will be shared once shipped.</li>
+        </ul>
+        <p>We work with trusted delivery partners to ensure safe delivery.</p>
+      `
+    };
+  }
+
+  else if (type === "refund") {
+    data = {
+      title: "Refund Policy",
+      content: `
+        <p>We accept returns for defective or damaged products within 24 hours.</p>
+        <p>Opening video is mandatory for damage claims.</p>
+        <p>Items must be unused and in original packaging.</p>
+      `
+    };
+  }
+
+  else if (type === "faq") {
+    data = {
+      title: "FAQs",
+      content: `<p>Find answers related to orders, shipping, payments, and more.</p>`
+    };
+  }
+
+  else if (type === "about") {
+    data = {
+      title: "About Us",
+      content: `<p>Kayaara is a celebration of elegance, individuality, and modern jewellery design.</p>`
+    };
+  }
+
+  else if (type === "contact") {
+    data = {
+      title: "Contact Us",
+      content: `<p>Reach us via WhatsApp, email, or contact form for any assistance.</p>`
+    };
+  }
+
+  else if (type === "privacy") {
+    data = {
+      title: "Privacy Policy",
+      content: `<p>Your data is safe. We do not share personal information with third parties.</p>`
+    };
+  }
+
+  else if (type === "terms") {
+    data = {
+      title: "Terms of Service",
+      content: `<p>By using this website, you agree to our terms and conditions.</p>`
+    };
+  }
+
+  title.innerText = data.title;
+  content.innerHTML = data.content;
+});

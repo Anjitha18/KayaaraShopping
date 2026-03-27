@@ -21,7 +21,7 @@ function renderWishlist() {
       <img src="${product.image}" />
       <h3>${product.name}</h3>
       <p>₹${product.price}</p>
-      <button class="heart-btn" onclick="removeWishlist('${product.name}', this)">❤️</button>
+      <button class="heart-btn" onclick="removeWishlist('${product.name}', this)">Remove</button>
       <button onclick="orderNow('${product.name}')">Order Now</button>
     `;
     container.appendChild(div);
@@ -38,7 +38,7 @@ function removeWishlist(name, btn) {
 
 // WhatsApp order
 function orderNow(product) {
-  const number = "919080272108";
+  const number = "918262997357";
   const message = `I want to order ${product}`;
   const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");

@@ -30,7 +30,7 @@
 
 /* LOGO CENTER */
 .logo {
-  height: 50px;
+ 
   object-fit: contain;
 }
 .logo-text {
@@ -356,11 +356,12 @@ body {
 }
 /* LOGO IMAGE */
 .logo {
-  height: 50px;       /* control size */
+  height: 70px;       /* control size */
   object-fit: contain;
   display: block;
   margin: 0 auto;     /* center it */
 }
+
 
 
 #wishlistContainer .product button {
@@ -406,7 +407,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 40px; /* slightly smaller for mobile */
+     /* slightly smaller for mobile */
   }
 
 }

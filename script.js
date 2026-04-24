@@ -177,6 +177,18 @@ modal.addEventListener("click", function (e) {
 function toggleMenu() {
   document.getElementById("sideMenu").classList.toggle("active");
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const sideMenu = document.getElementById("sideMenu");
+
+  if (!sideMenu) return;
+
+  sideMenu.addEventListener("click", function (e) {
+    // only close when clicking a link
+    if (e.target.tagName === "A") {
+      sideMenu.classList.remove("active");
+    }
+  });
+});
 
 // ================= CONTACT =================
 function goContact() {
@@ -288,4 +300,5 @@ renderProductsBatch();
 
 viewMoreBtn.addEventListener("click", () => {
   renderProductsBatch();
+  
 });

@@ -40,7 +40,10 @@ modal.style = `
 modal.innerHTML = `
   <div style="background:white;padding:20px;border-radius:10px;max-width:420px;width:90%;text-align:center;position:relative">
 
-    <span id="closeModal" style="position:absolute;top:10px;right:15px;font-size:22px;cursor:pointer">×</span>
+    <span id="closeModal"
+      style="position:absolute;top:10px;right:15px;font-size:22px;cursor:pointer;z-index:9999">
+      ×
+    </span>
 
     <!-- IMAGE CAROUSEL -->
     <div style="position:relative;overflow:hidden;border-radius:10px">
@@ -59,7 +62,6 @@ modal.innerHTML = `
     </div>
   </div>
 `;
-   
 
 document.body.appendChild(modal);
 
@@ -81,7 +83,6 @@ function openModal(product) {
   dotsContainer.innerHTML = "";
   currentSlide = 0;
 
-  // Create images
   images.forEach(src => {
     const img = document.createElement("img");
     img.src = src;
@@ -94,7 +95,6 @@ function openModal(product) {
     track.appendChild(img);
   });
 
-  // Create dots
   images.forEach((_, i) => {
     const dot = document.createElement("span");
     dot.style = `
@@ -103,8 +103,7 @@ function openModal(product) {
       display:inline-block;
       cursor:pointer;
     `;
-
-    dot.onclick = () => goToSlide(i, images);
+    dot.onclick = () => goToSlide(i);
     dotsContainer.appendChild(dot);
   });
 
@@ -121,7 +120,7 @@ function openModal(product) {
     updateCarousel();
   }
 
-  // Swipe support
+  // Swipe support (safe + non-blocking click fix)
   track.onmousedown = (e) => startX = e.clientX;
   track.onmouseup = (e) => handleSwipe(e.clientX);
 
@@ -141,7 +140,6 @@ function openModal(product) {
     updateCarousel();
   }
 
-  // product info
   document.getElementById("modalTitle").innerText = product.name;
   document.getElementById("modalPrice").innerText = "₹" + product.price;
 
@@ -157,13 +155,20 @@ function openModal(product) {
 
   updateCarousel();
 }
-     
- 
 
+// ================= CLOSE FIX (ROBUST) =================
 
-// Close modal
+// 1. Direct close button click (MOST IMPORTANT FIX)
 document.addEventListener("click", function (e) {
-  if (e.target.id === "productModal" || e.target.id === "closeModal") {
+  if (e.target && e.target.id === "closeModal") {
+    e.stopPropagation();
+    modal.style.display = "none";
+  }
+});
+
+// 2. Background click only (safe)
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) {
     modal.style.display = "none";
   }
 });
@@ -233,11 +238,9 @@ const products = [
   { name: "Jade Aura", price: 349, images:"images/1000197572.jpg" },
   { name: "Royal Mayura", price: 450, images: "images/1000197575.jpg" },
   { name: "Royal Mayura", price: 450, images: "images/1000197578.jpg" },
-   { name: "Devi Idol", price: 260, images:"images/1000203075.jpg" },
+  { name: "Devi Idol", price: 260, images:"images/1000203075.jpg" },
   { name: "Sunflare Jhumka", price: 384, images: "images/1000203077.jpg" },
   { name: "Ruhani Blue Combo", price: 599, images: "images/1000203079.png" }
-
-  
 ];
 
 const productContainer = document.getElementById("productContainer");

@@ -421,7 +421,7 @@ body {
 .policies {
   background: white;              /* black background */
   color: black;                  /* white text */
-  padding: 40px 20px;
+  padding: 0px 20px;
   line-height: 1.6;
 }
 .contact{
@@ -467,6 +467,7 @@ body {
   padding: 8px 12px;   /* make button bigger */
   color: #0b3d91;      /* dark blue */
 }
+
 
 #wishlist-icon span,
 .wishlist-icon span {

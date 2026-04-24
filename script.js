@@ -117,7 +117,10 @@ const products = [
   { name: "Royal Mayura", price: 450, image: "images/1000197569.jpg" },
   { name: "Jade Aura", price: 349, image:"images/1000197572.jpg" },
   { name: "Royal Mayura", price: 450, image: "images/1000197575.jpg" },
-  { name: "Royal Mayura", price: 450, image: "images/1000197578.jpg" }
+  { name: "Royal Mayura", price: 450, image: "images/1000197578.jpg" },
+   { name: "Devi Idol", price: 260, image:"images/1000203075.jpg" },
+  { name: "Sunflare Jhumka", price: 384, image: "images/1000203077.jpg" },
+  { name: "Ruhani Blue Combo", price: 599, image: "images/1000203079.png" }
 ];
 
 const productContainer = document.getElementById("productContainer");
@@ -274,4 +277,5 @@ document.querySelectorAll(".menu a").forEach(item => {
   item.addEventListener("click", () => {
     document.querySelector(".menu").classList.remove("active");
   });
+  
 });

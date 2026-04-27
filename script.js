@@ -228,31 +228,25 @@ window.addEventListener("pageshow", () => {
 
 // ================= PRODUCTS =================
 const products = [
-  { name: "Jade Aura", price: 349, images: ["images/1000197530.png","images/1000197530.png","images/1000197530.png"] },
-  { name: "Royal Mayura", price: 450, images: ["images/1000197532.png","images/1000197532.png","images/1000197532.png"]},
-  { name: "Linear Bloom", price: 260, images: ["images/1000197528.png","images/1000197528.png"] },
-  { name: "Noor Chakra", price: 370, images: ["images/1000197536.png","images/1000197536.png"] },
-  { name: "Ruhani Rose Combo", price: 300, image: "images/Ruhani rose combo.png" },
-  { name: "Sitara Glow", price: 550, image: "images/1000197542.png" },
-  { name: "Noor Chakra", price: 370, image: "images/1000197548.jpg" },
+  { name: "Jade Aura", price: 349, images: ["images/1000197530.png","images/1000197572.jpg","images/Jade_Aura_3.jpeg"] },
+  { name: "Royal Mayura", price: 450, images: ["images/1000197532.png","images/Royal mayura_5.png","images/1000197569.jpg","images/1000197575.jpg","images/1000197578.jpg"]},
+  { name: "Linear Bloom", price: 260, image: "images/1000197528.png"},
+  { name: "Noor Chakra", price: 370, images: ["images/1000197536.png","images/1000197548.jpg"] },
+  { name: "Ruhani Rose Combo", price: 300, images: ["images/Ruhani rose combo.png","images/Ruhani_rose_combo_4.png","images/Ruhani_rose_combo_3.png","images/Ruhani_rose_combo_2.png"] },
+  { name: "Sitara Glow", price: 550, images: [ "images/1000197566.jpg","images/1000197542.png"] },
   { name: "Peacock Pendant", price: 300, image: "images/IMG-20260326-WA0001.jpg" },
   { name: "Ruby Crescent Chandbali", price: 450, image: "images/1000197514.png" },
   { name: "Regal Loop Charm", price: 340, image: "images/1000197518.png" },
   { name: "Regal Loop Charm", price: 340, image: "images/1000197520.png" },
-  { name: "Noor Mandala Drops", price: 450, image: "images/1000197522.png" },
+  { name: "Noor Mandala Drops", price: 450, images: ["images/1000197522.png","images/Noor_mandala_2.png","images/Noor_mandala_3.png","images/Noor_mandala_4.png"] },
   { name: "Regal Loop Charm", price: 340, image: "images/1000197524.png" },
   { name: "Devi Crescent Drops", price: 399, image: "images/1000197526.png" },
   { name: "Petal Crescent", price: 354, image: "images/1000197554.jpg" },
   { name: "Regal Loop Charm", price: 340, image: "images/1000197560.jpg" },
-  { name: "Aura Petals", price: 295, image: "images/1000197563.jpg" },
-  { name: "Sitara Glow", price: 550, image: "images/1000197566.jpg" },
-  { name: "Royal Mayura", price: 450, image: "images/1000197569.jpg" },
-  { name: "Jade Aura", price: 349, image:"images/1000197572.jpg" },
-  { name: "Royal Mayura", price: 450, image: "images/1000197575.jpg" },
-  { name: "Royal Mayura", price: 450, image: "images/1000197578.jpg" },
-  { name: "Devi Idol", price: 260, image:"images/1000203075.jpg" },
+  { name: "Aura Petals", price: 295, images:["images/Aura_petal_1.png","images/Aura_petal_2.png","images/Aura_petal_3.jpeg", "images/1000197563.jpg" ]},
   { name: "Sunflare Jhumka", price: 384, image: "images/1000203077.jpg" },
-  { name: "Ruhani Blue Combo", price: 599, image: "images/1000203079.png" }
+  { name: "Ruhani Blue Combo", price: 599, images: ["images/1000203079.png","images/Ruhani_blue_combo_2.png","images/Ruhani_blue_combo_3.png","images/Ruhani_blue_combo_4.png"] },
+  { name: "Red Meenakari", price: 290, image: "images/Red meenakari.jpeg" },
 ];
 
 const productContainer = document.getElementById("productContainer");

@@ -232,7 +232,7 @@ const products = [
   { name: "Royal Mayura", price: 450, images: ["images/1000197532.png","images/Royal mayura_5.png","images/1000197569.jpg","images/1000197575.jpg","images/1000197578.jpg"]},
   { name: "Linear Bloom", price: 260, image: "images/1000197528.png"},
   { name: "Noor Chakra", price: 370, images: ["images/1000197536.png","images/1000197548.jpg"] },
-  { name: "Ruhani Rose Combo", price: 300, images: ["images/Ruhani rose combo.png","images/Ruhani_rose_combo_4.png","images/Ruhani_rose_combo_3.png","images/Ruhani_rose_combo_2.png"] },
+  { name: "Ruhani Rose Combo", price: 599, images: ["images/Ruhani rose combo.png","images/Ruhani_rose_combo_4.png","images/Ruhani_rose_combo_3.png","images/Ruhani_rose_combo_2.png"] },
   { name: "Sitara Glow", price: 550, images: [ "images/1000197566.jpg","images/1000197542.png"] },
   { name: "Peacock Pendant", price: 300, image: "images/IMG-20260326-WA0001.jpg" },
   { name: "Ruby Crescent Chandbali", price: 450, image: "images/1000197514.png" },
